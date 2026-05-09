@@ -35,3 +35,4 @@ select * from Usuarios  AS U LEFT JOIN reservas AS r ON r.id_comprador = u.curp
 where r.id_comprador is null; 
 
 SELECT SUM(cantidad) AS total FROM pagos;
+

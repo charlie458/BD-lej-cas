@@ -30,7 +30,7 @@ CREATE TABLE `bitacora` (
   `fecha_movimiento` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `descripcion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_bitacora`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `bitacora` (
 
 LOCK TABLES `bitacora` WRITE;
 /*!40000 ALTER TABLE `bitacora` DISABLE KEYS */;
-INSERT INTO `bitacora` VALUES (1,'Casas','INSERT','root@localhost','2026-03-19 05:06:59','Se creó nueva casa con ID: 11 para el propietario CURP011'),(2,'Casas','UPDATE','root@localhost','2026-03-19 05:06:59','Se actualizó el cupo a 6 y la imagen de la casa con ID: 5'),(3,'Casas','INSERT','root@localhost','2026-03-19 05:17:16','Alta exitosa de propiedad ID: 12 en region 01000');
+INSERT INTO `bitacora` VALUES (1,'Casas','INSERT','root@localhost','2026-03-19 05:06:59','Se creó nueva casa con ID: 11 para el propietario CURP011'),(2,'Casas','UPDATE','root@localhost','2026-03-19 05:06:59','Se actualizó el cupo a 6 y la imagen de la casa con ID: 5'),(3,'Casas','INSERT','root@localhost','2026-03-19 05:17:16','Alta exitosa de propiedad ID: 12 en region 01000'),(5,'Casas','INSERT','root@localhost','2026-03-23 15:47:03',NULL),(6,'Casas','INSERT','root@localhost','2026-03-23 15:49:00','Alta exitosa de propiedad ID: 13 en region 01000');
 /*!40000 ALTER TABLE `bitacora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,7 +66,7 @@ CREATE TABLE `casas` (
   KEY `id_propietario` (`id_propietario`),
   CONSTRAINT `casas_ibfk_1` FOREIGN KEY (`id_region`) REFERENCES `regiones` (`codigo_postal`),
   CONSTRAINT `casas_ibfk_2` FOREIGN KEY (`id_propietario`) REFERENCES `usuarios` (`curp`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `casas` (
 
 LOCK TABLES `casas` WRITE;
 /*!40000 ALTER TABLE `casas` DISABLE KEYS */;
-INSERT INTO `casas` VALUES (1,4,'Dos plantas','img1.jpg',3,'Roble',101,'01000','CURP001'),(2,2,'Una planta','img2.jpg',1,'Pino',202,'44100','CURP003'),(3,6,'Otro tipo','img3.jpg',4,'Cedro',303,'64000','CURP004'),(4,3,'Dos plantas','img4.jpg',2,'Sauce',404,'72000','CURP006'),(5,6,'Una planta','img5_new.jpg',3,'Palma',505,'97000','CURP008'),(6,2,'Una planta','img6.jpg',1,'Olmo',606,'01000','CURP009'),(7,8,'Dos plantas','img7.jpg',5,'Fresno',707,'44100','CURP011'),(8,4,'Dos plantas','img8.jpg',3,'Abeto',808,'64000','CURP013'),(9,3,'Una planta','img9.jpg',2,'Alamo',909,'72000','CURP014'),(10,6,'Otro tipo','img10.jpg',4,'Enebro',111,'97000','CURP001'),(11,2,'Una planta','loft_mty.jpg',1,'Calle Falsa',123,'64000','CURP011'),(12,5,'Dos plantas','img11.jpg',4,'Av. Siempre Viva',742,'01000','CURP011');
+INSERT INTO `casas` VALUES (1,4,'Dos plantas','img1.jpg',3,'Roble',101,'01000','CURP001'),(2,2,'Una planta','img2.jpg',1,'Pino',202,'44100','CURP003'),(3,6,'Otro tipo','img3.jpg',4,'Cedro',303,'64000','CURP004'),(4,3,'Dos plantas','img4.jpg',2,'Sauce',404,'72000','CURP006'),(5,6,'Una planta','img5_new.jpg',3,'Palma',505,'97000','CURP008'),(6,2,'Una planta','img6.jpg',1,'Olmo',606,'01000','CURP009'),(7,8,'Dos plantas','img7.jpg',5,'Fresno',707,'44100','CURP011'),(8,4,'Dos plantas','img8.jpg',3,'Abeto',808,'64000','CURP013'),(9,3,'Una planta','img9.jpg',2,'Alamo',909,'72000','CURP014'),(10,6,'Otro tipo','img10.jpg',4,'Enebro',111,'97000','CURP001'),(11,2,'Una planta','loft_mty.jpg',1,'Calle Falsa',123,'64000','CURP011'),(12,5,'Dos plantas','img11.jpg',4,'Av. Siempre Viva',742,'01000','CURP011'),(13,5,'Dos plantas','img11.jpg',4,'Av.  bade de datos ',742,'01000','CURP011');
 /*!40000 ALTER TABLE `casas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,6 +331,26 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `vw_pagos_pendientes`
+--
+
+DROP TABLE IF EXISTS `vw_pagos_pendientes`;
+/*!50001 DROP VIEW IF EXISTS `vw_pagos_pendientes`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_pagos_pendientes` AS SELECT 
+ 1 AS `id_pago`,
+ 1 AS `cliente`,
+ 1 AS `telefono`,
+ 1 AS `direccion_casa`,
+ 1 AS `monto_deuda`,
+ 1 AS `inicio_estancia`,
+ 1 AS `fin_estancia`,
+ 1 AS `archivo_contrato`,
+ 1 AS `estado`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Final view structure for view `vw_casas_clientes_ubicacion`
 --
 
@@ -365,6 +385,24 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_pagos_pendientes`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_pagos_pendientes`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_pagos_pendientes` AS select `p`.`id` AS `id_pago`,`u`.`nombres` AS `cliente`,`u`.`telefono` AS `telefono`,`c`.`calle` AS `direccion_casa`,`p`.`cantidad` AS `monto_deuda`,`r`.`fecha_inicio` AS `inicio_estancia`,`r`.`fecha_fin` AS `fin_estancia`,`con`.`contrato_pdf` AS `archivo_contrato`,`p`.`estado` AS `estado` from ((((`pagos` `p` join `reservas` `r` on((`p`.`id_reserva` = `r`.`id`))) join `usuarios` `u` on((`r`.`id_comprador` = `u`.`curp`))) join `casas` `c` on((`r`.`id_casa` = `c`.`id`))) left join `contratos` `con` on((`r`.`id` = `con`.`id_reserva`))) where (`p`.`estado` = 'Pendiente') */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -375,4 +413,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-18 23:22:47
+-- Dump completed on 2026-03-26 17:25:01

@@ -34,4 +34,5 @@ VALUES (
 );
 
 
+select * from bitacora;
 

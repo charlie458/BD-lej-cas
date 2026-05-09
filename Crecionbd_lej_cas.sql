@@ -79,7 +79,7 @@ CREATE TABLE ReseniasCasas(
   comentario VARCHAR(300) NULL,
   id_casa INT NOT NULL,
   id_calificador VARCHAR(20) NOT NULL,
-  fecha DATETIME NOT NULL,
+  fecha DATETIME NOT NULL,		
   FOREIGN KEY (id_casa) REFERENCES Casas(id),
   FOREIGN KEY (id_calificador) REFERENCES Usuarios(curp)
 );
@@ -95,3 +95,4 @@ CREATE TABLE ReseniasUsuario(
   FOREIGN KEY (id_Usuario) REFERENCES Usuarios(curp),
   FOREIGN KEY (id_calificador) REFERENCES Usuarios(curp)
 );
+

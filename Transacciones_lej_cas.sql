@@ -3,7 +3,7 @@ USE lejos_de_casa;
 START TRANSACTION;
 
 INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario) 
-VALUES (5, 'Dos plantas', 'img11.jpg', 4, 'Av. Siempre Viva', 742, '01000', 'CURP011');
+VALUES (5, 'Dos plantas', 'img11.jpg', 4, 'Av.  bade de datos ', 742, '01000', 'CURP011');
 
 SET @nuevo_id_casa = LAST_INSERT_ID();
 
@@ -16,6 +16,10 @@ VALUES (
 );
 
 COMMIT;
+
+SELECT * FROM Casas;
+
+
 
 
 START TRANSACTION;
@@ -30,4 +34,10 @@ VALUES ('Casas', 'DELETE', USER(), 'Intento de borrado de casa ID 11');
 
 -- Se cancela la eliminacion de esa casa
 ROLLBACK;
+
+
+
+
+
+
 
