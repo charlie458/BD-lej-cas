@@ -80,7 +80,7 @@ END //
 DELIMITER ;
 
 
-drop PROCEDURE sp_region_nueva;
+
 
 CALL sp_region_nueva(20200,'Aguascalientes','Calvillo');
 

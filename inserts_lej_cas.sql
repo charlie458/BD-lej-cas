@@ -21,23 +21,23 @@ INSERT INTO Regiones (codigo_postal, estado, municipio) VALUES
 ('72000', 'Puebla', 'Puebla'),
 ('97000', 'Yucatán', 'Mérida');
 
-INSERT INTO Usuarios (curp, nombres, apellidos, correo, telefono, rol, fecha_registro, calle, num_interior, codigo_postal, ciudad, municipio) VALUES
-('CURP001', 'Juan', 'Pérez', 'juan@mail.com', '5550001', 'vendedor', NOW(), 'Av. Reforma', 10, '01000', 'CDMX', 'Álvaro Obregón'),
-('CURP002', 'María', 'García', 'maria@mail.com', '5550002', 'comprador', NOW(), 'Calle 5', 20, '44100', 'Guadalajara', 'Guadalajara'),
-('CURP003', 'Carlos', 'Rodríguez', 'carlos@mail.com', '5550003', 'ambos', NOW(), 'Hidalgo', 5, '64000', 'Monterrey', 'Monterrey'),
-('CURP004', 'Ana', 'Martínez', 'ana@mail.com', '5550004', 'vendedor', NOW(), 'Juárez', 15, '72000', 'Puebla', 'Puebla'),
-('CURP005', 'Luis', 'Hernández', 'luis@mail.com', '5550005', 'comprador', NOW(), 'Madero', 8, '97000', 'Mérida', 'Mérida'),
-('CURP006', 'Elena', 'López', 'elena@mail.com', '5550006', 'vendedor', NOW(), 'Constitución', 12, '01000', 'CDMX', 'Álvaro Obregón'),
-('CURP007', 'Pedro', 'Sánchez', 'pedro@mail.com', '5550007', 'comprador', NOW(), 'Independencia', 3, '44100', 'Guadalajara', 'Guadalajara'),
-('CURP008', 'Sofía', 'Ramírez', 'sofia@mail.com', '5550008', 'ambos', NOW(), 'Morelos', 101, '64000', 'Monterrey', 'Monterrey'),
-('CURP009', 'Jorge', 'Flores', 'jorge@mail.com', '5550009', 'vendedor', NOW(), 'Serdán', 45, '72000', 'Puebla', 'Puebla'),
-('CURP010', 'Lucía', 'Torres', 'lucia@mail.com', '5550100', 'comprador', NOW(), 'Montejo', 22, '97000', 'Mérida', 'Mérida'),
-('CURP011', 'Miguel', 'Vázquez', 'miguel@mail.com', '5550111', 'vendedor', NOW(), 'Insurgentes', 500, '01000', 'CDMX', 'Álvaro Obregón'),
-('CURP012', 'Laura', 'Gómez', 'laura@mail.com', '5550112', 'comprador', NOW(), 'Vallarta', 33, '44100', 'Guadalajara', 'Guadalajara'),
-('CURP013', 'Diego', 'Díaz', 'diego@mail.com', '5550113', 'ambos', NOW(), 'Garza Sada', 88, '64000', 'Monterrey', 'Monterrey'),
-('CURP014', 'Rosa', 'Morales', 'rosa@mail.com', '5550114', 'vendedor', NOW(), 'Revolución', 9, '72000', 'Puebla', 'Puebla'),
-('CURP015', 'Oscar', 'Reyes', 'oscar@mail.com', '5550115', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida'),
-('CURP016', 'Jorge', '', 'prueba@mail.com', '5550116', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida');
+INSERT INTO Usuarios (curp, nombres, apellidos, correo, telefono, rol, fecha_registro, calle, num_interior, codigo_postal, ciudad, municipio,contrasena) VALUES
+('CURP001', 'Juan', 'Pérez', 'juan@mail.com', '5550001', 'vendedor', NOW(), 'Av. Reforma', 10, '01000', 'CDMX', 'Álvaro Obregón','123'),
+('CURP002', 'María', 'García', 'maria@mail.com', '5550002', 'comprador', NOW(), 'Calle 5', 20, '44100', 'Guadalajara', 'Guadalajara','123'),
+('CURP003', 'Carlos', 'Rodríguez', 'carlos@mail.com', '5550003', 'ambos', NOW(), 'Hidalgo', 5, '64000', 'Monterrey', 'Monterrey','123'),
+('CURP004', 'Ana', 'Martínez', 'ana@mail.com', '5550004', 'vendedor', NOW(), 'Juárez', 15, '72000', 'Puebla', 'Puebla','123'),
+('CURP005', 'Luis', 'Hernández', 'luis@mail.com', '5550005', 'comprador', NOW(), 'Madero', 8, '97000', 'Mérida', 'Mérida','123'),
+('CURP006', 'Elena', 'López', 'elena@mail.com', '5550006', 'vendedor', NOW(), 'Constitución', 12, '01000', 'CDMX', 'Álvaro Obregón','123'),
+('CURP007', 'Pedro', 'Sánchez', 'pedro@mail.com', '5550007', 'comprador', NOW(), 'Independencia', 3, '44100', 'Guadalajara', 'Guadalajara','123'),
+('CURP008', 'Sofía', 'Ramírez', 'sofia@mail.com', '5550008', 'ambos', NOW(), 'Morelos', 101, '64000', 'Monterrey', 'Monterrey','123'),
+('CURP009', 'Jorge', 'Flores', 'jorge@mail.com', '5550009', 'vendedor', NOW(), 'Serdán', 45, '72000', 'Puebla', 'Puebla','123'),
+('CURP010', 'Lucía', 'Torres', 'lucia@mail.com', '5550100', 'comprador', NOW(), 'Montejo', 22, '97000', 'Mérida', 'Mérida','123'),
+('CURP011', 'Miguel', 'Vázquez', 'miguel@mail.com', '5550111', 'vendedor', NOW(), 'Insurgentes', 500, '01000', 'CDMX', 'Álvaro Obregón','123'),
+('CURP012', 'Laura', 'Gómez', 'laura@mail.com', '5550112', 'comprador', NOW(), 'Vallarta', 33, '44100', 'Guadalajara', 'Guadalajara','123'),
+('CURP013', 'Diego', 'Díaz', 'diego@mail.com', '5550113', 'ambos', NOW(), 'Garza Sada', 88, '64000', 'Monterrey', 'Monterrey','123'),
+('CURP014', 'Rosa', 'Morales', 'rosa@mail.com', '5550114', 'vendedor', NOW(), 'Revolución', 9, '72000', 'Puebla', 'Puebla','123'),
+('CURP015', 'Oscar', 'Reyes', 'oscar@mail.com', '5550115', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida','123'),
+('CURP016', 'Jorge', '', 'prueba@mail.com', '5550116', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida','123');
 
 INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario) VALUES
 (4, 'Dos plantas', 'img1.jpg', 3, 'Roble', 101, '01000', 'CURP001'),

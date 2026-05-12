@@ -26,7 +26,8 @@ CREATE TABLE Usuarios(
   num_interior int NOT NULL,
   codigo_postal VARCHAR(10) NOT NULL,
   ciudad VARCHAR(20) NOT NULL,
-  municipio VARCHAR(50) NOT NULL
+  municipio VARCHAR(50) NOT NULL,
+  contrasena VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Casas(
@@ -95,4 +96,6 @@ CREATE TABLE ReseniasUsuario(
   FOREIGN KEY (id_Usuario) REFERENCES Usuarios(curp),
   FOREIGN KEY (id_calificador) REFERENCES Usuarios(curp)
 );
+
+
 

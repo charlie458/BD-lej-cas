@@ -1,7 +1,7 @@
 use lejos_de_casa;
 
 create user if not exists 'administrador'@'localhost' identified by '1234';
-create user 'admin_users'@'localhost' identified by '1234';
+create user if not exists 'admin_users'@'localhost' identified by '1234';
 create user if not exists 'gestion_casas'@'localhost' identified by '1234';
 
 create role if not exists 'Administrador';
