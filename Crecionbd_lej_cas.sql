@@ -40,6 +40,7 @@ CREATE TABLE Casas(
   num_interior INT NOT NULL,
   id_region VARCHAR(10) NOT NULL,
   id_propietario VARCHAR(20),
+  precio INT NOT NULL,
   FOREIGN KEY (id_region) REFERENCES Regiones(codigo_postal),
   FOREIGN KEY(id_propietario) REFERENCES Usuarios(curp) 
 );

@@ -19,8 +19,8 @@ END //
 DELIMITER ;
 
 SELECT * FROM bitacora;
-INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario) VALUES
-(4, 'Dos plantas', 'img16.jpg', 2, 'Clarin', '201', '01000', 'CURP001');
+INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario,precio) VALUES
+(4, 'Dos plantas', 'img16.jpg', 2, 'Clarin', '201', '01000', 'CURP001',10000);
 
 
 SELECT * FROM casas;

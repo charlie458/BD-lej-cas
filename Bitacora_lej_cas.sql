@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS Bitacora(
     descripcion VARCHAR(255)
 );
 
-INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario) 
-VALUES (2, 'Una planta', 'loft_mty.jpg', 1, 'Calle Falsa', 123, '64000', 'CURP011');
+INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario,precio) 
+VALUES (2, 'Una planta', 'loft_mty.jpg', 1, 'Calle Falsa', 123, '64000', 'CURP011',12000);
 
 INSERT INTO Bitacora (tabla_afectada, operacion, usuario_db, descripcion)
 VALUES (

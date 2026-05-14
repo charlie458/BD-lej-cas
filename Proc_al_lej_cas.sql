@@ -102,7 +102,7 @@ DROP PROCEDURE sp_numero_cuartos;
 
 SELECT * FROM casas;
 
-CALL sp_numero_cuartos(1,3);
+CALL sp_numero_cuartos(1,4);
 
 
   

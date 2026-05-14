@@ -39,17 +39,17 @@ INSERT INTO Usuarios (curp, nombres, apellidos, correo, telefono, rol, fecha_reg
 ('CURP015', 'Oscar', 'Reyes', 'oscar@mail.com', '5550115', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida','123'),
 ('CURP016', 'Jorge', '', 'prueba@mail.com', '5550116', 'comprador', NOW(), 'Calle 60', 110, '97000', 'Mérida', 'Mérida','123');
 
-INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario) VALUES
-(4, 'Dos plantas', 'img1.jpg', 3, 'Roble', 101, '01000', 'CURP001'),
-(2, 'Una planta', 'img2.jpg', 1, 'Pino', 202, '44100', 'CURP003'),
-(6, 'Otro tipo', 'img3.jpg', 4, 'Cedro', 303, '64000', 'CURP004'),
-(3, 'Dos plantas', 'img4.jpg', 2, 'Sauce', 404, '72000', 'CURP006'),
-(5, 'Una planta', 'img5.jpg', 3, 'Palma', 505, '97000', 'CURP008'),
-(2, 'Una planta', 'img6.jpg', 1, 'Olmo', 606, '01000', 'CURP009'),
-(8, 'Dos plantas', 'img7.jpg', 5, 'Fresno', 707, '44100', 'CURP011'),
-(4, 'Dos plantas', 'img8.jpg', 3, 'Abeto', 808, '64000', 'CURP013'),
-(3, 'Una planta', 'img9.jpg', 2, 'Alamo', 909, '72000', 'CURP014'),
-(6, 'Otro tipo', 'img10.jpg', 4, 'Enebro', 111, '97000', 'CURP001');
+INSERT INTO Casas (cupo, tipo, imagen, cuartos, calle, num_interior, id_region, id_propietario,precio) VALUES
+(4, 'Dos plantas', 'img1.jpg', 3, 'Roble', 101, '01000', 'CURP001',5000),
+(2, 'Una planta', 'img2.jpg', 1, 'Pino', 202, '44100', 'CURP003',7000),
+(6, 'Otro tipo', 'img3.jpg', 4, 'Cedro', 303, '64000', 'CURP004',10000),
+(3, 'Dos plantas', 'img4.jpg', 2, 'Sauce', 404, '72000', 'CURP006',5000),
+(5, 'Una planta', 'img5.jpg', 3, 'Palma', 505, '97000', 'CURP008',6000),
+(2, 'Una planta', 'img6.jpg', 1, 'Olmo', 606, '01000', 'CURP009',10000),
+(8, 'Dos plantas', 'img7.jpg', 5, 'Fresno', 707, '44100', 'CURP011',12000),
+(4, 'Dos plantas', 'img8.jpg', 3, 'Abeto', 808, '64000', 'CURP013',11000),
+(3, 'Una planta', 'img9.jpg', 2, 'Alamo', 909, '72000', 'CURP014',10000),
+(6, 'Otro tipo', 'img10.jpg', 4, 'Enebro', 111, '97000', 'CURP001',9000);
 
 INSERT INTO Reservas (fecha_inicio, fecha_fin, estado, id_casa, id_comprador) VALUES
 ('2024-05-01 14:00:00', '2024-05-07 11:00:00', 'Activo', 1, 'CURP002'),
